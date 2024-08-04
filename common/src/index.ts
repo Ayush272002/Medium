@@ -25,7 +25,7 @@ export const createBlogInput = z.object({
 export const updateBlogInput = z.object({
   title: z.string(),
   content: z.string(),
-  id: z.string(),
+  id: z.number(),
 });
 
 //type inference
