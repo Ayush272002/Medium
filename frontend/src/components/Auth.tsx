@@ -1,7 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import LabelledInput from "./LabelledInput";
 import { useState } from "react";
-import { SignupInput } from "@ayush272002/medium-common";
+import { SignupInput } from "@ayush272002/medium-common-v3";
 import axios from "axios";
 import { toast } from "react-toastify";
 
@@ -37,8 +37,8 @@ const Auth = ({ type }: { type: "signup" | "signin" }) => {
         `${BACKEND_URL}/api/v1/user/${type === "signup" ? "signup" : "signin"}`,
         postInputs
       );
-      const jwt = res.data;
-      localStorage.setItem("jwt", jwt);
+      const jwt = res.data.jwt;
+      localStorage.setItem("jwt", JSON.stringify(jwt));
       toast.success(`${type === "signup" ? "Signup" : "Signin"} successful!`);
       navigate("/blogs");
     } catch (err) {
