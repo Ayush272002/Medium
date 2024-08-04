@@ -4,6 +4,10 @@
 
 Check out the live demo of the app: [Medium Blogging App](https://medium-ayush.vercel.app)
 
+Test Credentials - <br>
+Email - test@testemail.com <br>
+Password - Test@1234 <br>
+
 ## Tech Stack
 
 - React in the frontend
