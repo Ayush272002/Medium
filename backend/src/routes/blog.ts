@@ -119,7 +119,7 @@ blogRouter.get("/bulk", async (c) => {
         },
       },
     });
-    return c.json({blogs});
+    return c.json({ blogs });
   } catch (error) {
     console.error("Error fetching blog posts:", error);
     return c.json({ error: "Internal Server Error" }, 500);
@@ -136,6 +136,16 @@ blogRouter.get("/:id", async (c) => {
     const post = await prisma.post.findUnique({
       where: {
         id: id,
+      },
+      select: {
+        id: true,
+        title: true,
+        content: true,
+        author: {
+          select: {
+            name: true,
+          },
+        },
       },
     });
 
