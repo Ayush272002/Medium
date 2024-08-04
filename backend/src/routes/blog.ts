@@ -119,7 +119,7 @@ blogRouter.get("/bulk", async (c) => {
         },
       },
     });
-    return c.json(blogs);
+    return c.json({blogs});
   } catch (error) {
     console.error("Error fetching blog posts:", error);
     return c.json({ error: "Internal Server Error" }, 500);
