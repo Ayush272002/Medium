@@ -24,7 +24,7 @@ For the db, I've used Postgres and prisma for ORM and connection pool, and since
 
 It generally contains the `types` which is used by both frontend and backend since, writing it on both places would have been violation of DRY rule, so i created a commons folder and wrote the types and the zod validation schema and published it to npmjs as a public package and used it in both frontend and backend, <br>
 
-Here is the link to that [package](https://www.npmjs.com/package/@ayush272002/medium-common-v2) <br>
+Here is the link to that [package](https://www.npmjs.com/package/@ayush272002/medium-common-v3) <br>
 
 To avoid all that mumbo-jumbo a better solution would have been Monorepo.
 
