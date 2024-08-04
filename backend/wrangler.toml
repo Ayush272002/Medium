@@ -1,0 +1,23 @@
+name = "backend"
+compatibility_date = "2024-08-02"
+
+[vars]
+# The DATABASE_URL should be the connection pool URL for your PostgreSQL database.
+DATABASE_URL=""
+JWT_SECRET = ""
+
+# [[kv_namespaces]]
+# binding = "MY_KV_NAMESPACE"
+# id = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+
+# [[r2_buckets]]
+# binding = "MY_BUCKET"
+# bucket_name = "my-bucket"
+
+# [[d1_databases]]
+# binding = "DB"
+# database_name = "my-database"
+# database_id = ""
+
+# [ai]
+# binding = "AI"
