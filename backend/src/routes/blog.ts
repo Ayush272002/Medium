@@ -134,7 +134,7 @@ blogRouter.get("/:id", async (c) => {
       datasourceUrl: c.env.DATABASE_URL,
     }).$extends(withAccelerate());
 
-    const post = await prisma.post.findUnique({
+    const blog = await prisma.post.findUnique({
       where: {
         id: Number(id),
       },
@@ -150,11 +150,11 @@ blogRouter.get("/:id", async (c) => {
       },
     });
 
-    if (!post) {
+    if (!blog) {
       return c.json({ error: "Post not found" }, 404);
     }
 
-    return c.json(post);
+    return c.json({blog});
   } catch (error) {
     console.error("Error fetching blog post:", error);
     return c.json({ error: "Internal Server Error" }, 500);
